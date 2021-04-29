@@ -1,11 +1,11 @@
 * {
   padding: 0;
-  margin: 2px;
+  /* margin: 2px; */
   box-sizing: initial;
 }
 
 :root {
-  --background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 1));
+  --background: linear-gradient(to right, rgb(0, 0, 0), rgb(11, 0, 33));
   --perfect-color: rgba(255, 101, 229, .8);
   --good-color: rgba(82, 236, 51, .8);
   --bad-color: rgba(207, 53, 53, .8);
@@ -14,13 +14,13 @@
   --score-color: rgba(240, 202, 36, .8);
   /* --hit-effect: linear-gradient(to bottom, rgba(255, 255, 255, .5), rgba(255, 255, 255, .3)); */
   --hit-color: rgba(255, 255, 255, .8);
-  --key-red: rgb(228, 19, 60);
-  --key-green: rgb(28, 228, 88);
-  --key-blue: rgb(36, 33, 236);
-  --key-yellow: rgb(230, 245, 22);
+  --key-red: rgb(219, 68, 55);
+  --key-green: rgb(15, 157, 88);
+  --key-blue: rgb(66, 133, 244);
+  --key-yellow: rgb(244, 180, 0);
   --keypress-red: linear-gradient(to top, rgba(254, 45, 87, .6), rgba(228, 15, 57, 0));
   --keypress-green: linear-gradient(to top, rgba(15, 196, 39, 0.6), rgba(28, 228, 61, 0));
-  --keypress-orange: linear-gradient(to top, rgba(31, 27, 240, 0.6), rgba(228, 98, 18, 0));
+  --keypress-blue: linear-gradient(to top, rgba(31, 27, 240, 0.6), rgba(228, 98, 18, 0));
   --keypress-yellow: linear-gradient(to top, rgba(185, 204, 11, 0.6), rgba(228, 240, 60, 0));
 
 }
@@ -42,8 +42,8 @@ main {
 }
 
 h2 {
-  padding: 1rem;
   text-transform: uppercase;
+  padding: 3px;
 }
 
 .game {
@@ -52,7 +52,7 @@ h2 {
   flex: 0 0 calc(100% / 2);
   flex-direction: column;
   max-width: 50rem;
-  background: rgb(255, 255, 255);
+  background: rgb(0, 0, 0);
   margin: 0 auto;
   position: relative;
 }
@@ -106,6 +106,7 @@ h2 {
 }
 
 .track-container {
+  background-color: black;
   display: flex;
   flex: 1 0 auto;
   justify-content: space-around;
@@ -121,24 +122,23 @@ h2 {
 } */
 
  .track {
-  border-right: 1px solid grey;
+  border-right: 3px solid rgb(15, 0, 100);
 } 
 
 .key-container {
   display: flex;
-  flex: 0 0 5%;
+  flex: .005 0 6%;
   justify-content: space-around;
 }
 
 
 .key {
-  flex: 0 0 calc(100% / 7);
-  border-left: 1px solid grey;
-  border-right: 1px solid grey;
+  flex: 0 5 calc(100% / 7);
+  border-left: 1px solid rgb(0, 0, 0);
+  border-right: 1px solid rgb(0, 0, 0);
   text-align: center;
   position: relative;
-  font-size: 2rem;
-  
+  font-size: 24px;
 }
 
 .key--red {
@@ -175,7 +175,7 @@ h2 {
   position: absolute;
   width: 100%;
   height: 100%;
-  top: -100%;
+  top: -5%;
   display: none;
 }
 
@@ -214,8 +214,8 @@ h2 {
   background-image: var(--keypress-blue);
 }
 
-.keypress--orange {
-  background-image: var(--keypress-orange);
+.keypress--green {
+  background-image: var(--keypress-green);
 }
 
 .keypress--yellow {
@@ -233,6 +233,8 @@ h2 {
   align-content: center;
   justify-content: space-between;
   /* transition: all 1s; */
+  /* border-color: white;
+  border-left: white; */
 }
 
 
@@ -303,16 +305,17 @@ h2 {
 }
 
 .btn--small {
-  width: 7rem;
-  height: 7rem;
+  width: 6rem;
+  height: 5rem;
   border-radius: 10%;
   line-height: 5rem;
   vertical-align: center;
+  background-color: transparent;
 }
 
 
 .btn--primary {
-  border-radius: 6rem;
+  border-radius: 1rem;
   padding: 2rem 4rem;
   justify-self: flex-end;
 }
