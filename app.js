@@ -197,6 +197,7 @@ var setupKeys = function () {
   document.addEventListener('keydown', function (event) {
     var keyIndex = getKeyIndex(event.key);
 
+
     if (Object.keys(isHolding).indexOf(event.key) !== -1
       && !isHolding[event.key]) {
       isHolding[event.key] = true;
@@ -208,6 +209,7 @@ var setupKeys = function () {
     }
   });
 
+
   document.addEventListener('keyup', function (event) {
     if (Object.keys(isHolding).indexOf(event.key) !== -1) {
       var keyIndex = getKeyIndex(event.key);
@@ -216,6 +218,7 @@ var setupKeys = function () {
     }
   });
 };
+
 
 var getKeyIndex = function (key) {
   if (key === 'a') {
