@@ -269,15 +269,18 @@ h2 {
 }
 
 
+
 .menu__config {
   display: flex;
   justify-content: flex-end;
 }
 
+
 .author {
   text-decoration: underline;
   color: white;
 }
+
 
 .btn:link,
 .btn:visited {
@@ -291,6 +294,7 @@ h2 {
   margin: 0 auto;
   /* transition: all .2s; */
 }
+
 
 .btn:hover,
 .btn:active {
@@ -306,17 +310,20 @@ h2 {
   vertical-align: center;
 }
 
+
 .btn--primary {
   border-radius: 6rem;
   padding: 2rem 4rem;
   justify-self: flex-end;
 }
 
+
 .config__speed .btn--selected {
   background: white;
   color: black;
   width: 100px;
 }
+
 
 .config__challenge .btn--selected {
   background: white;
