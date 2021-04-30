@@ -6,8 +6,8 @@
 
 :root {
   --background: linear-gradient(to right, rgb(0, 0, 0), rgb(11, 0, 33));
-  --perfect-color: rgb(255, 255, 255);
-  --good-color: rgba(211, 255, 203, 0.8);
+  --perfect-color: rgb(9, 255, 0);
+  --good-color: rgba(24, 156, 1, 0.8);
   --bad-color: rgba(207, 53, 53, .8);
   --miss-color: rgba(199, 184, 184, .8);
   --maxcombo-color: rgba(0, 110, 255, .8);
@@ -84,25 +84,25 @@ h2 {
 .hit__accuracy--perfect {
   color: var(--perfect-color);
   opacity: 0;
-  animation: fade 1s;
+  animation: fade .7s;
 }
 
 .hit__accuracy--good {
   color: var(--good-color);
   opacity: 0;
-  animation: fade 1s;
+  animation: fade .5s;
 }
 
 .hit__accuracy--bad {
   color: var(--bad-color);
   opacity: 0;
-  animation: fade 1s;
+  animation: fade .2s;
 }
 
 .hit__accuracy--miss {
   color: var(--miss-color);
   opacity: 0;
-  animation: fade 1s;
+  animation: fade .5s;
 }
 
 .track-container {
@@ -117,13 +117,13 @@ h2 {
   flex: 0 0 calc(100% / 7);
 }
 
-/* .track:not(:last-child) {
+.track:not(:last-child) {
   border-right: 1px solid grey;
-} */
+}
 
  .track {
-  border-right: 3px solid rgb(255, 255, 255);
-} 
+  border-right: 1px solid grey; 
+}
 
 .key-container {
   display: flex;

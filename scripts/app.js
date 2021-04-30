@@ -235,9 +235,9 @@ var judge = function (index) {
 var getHitJudgement = function (accuracy) {
   if (accuracy < 0.2) {
     return 'perfect';
-  } else if (accuracy < 0.4) {
-    return 'good';
   } else if (accuracy < 0.6) {
+    return 'good';
+  } else if (accuracy < 0.8) {
     return 'bad';
   } else {
     return 'miss';
