@@ -1,6 +1,6 @@
 * {
   padding: 0;
-  /* margin: 2px; */
+  margin: 2px;
   box-sizing: initial;
 }
 
@@ -43,7 +43,7 @@ main {
 
 h2 {
   text-transform: uppercase;
-  padding: 3px;
+  padding: 1px;
 }
 
 .game {
@@ -293,7 +293,7 @@ h2 {
   text-decoration: none;
   /* transition: all .2s; */
   color: white;
-  margin: 0 auto;
+  margin: 1 auto;
   /* transition: all .2s; */
 }
 
@@ -305,6 +305,7 @@ h2 {
 }
 
 .btn--small {
+  padding: 5px;
   width: 6rem;
   height: 5rem;
   border-radius: 10%;
@@ -318,6 +319,7 @@ h2 {
   border-radius: 1rem;
   padding: 2rem 4rem;
   justify-self: flex-end;
+  margin-bottom: 7px;
 }
 
 
