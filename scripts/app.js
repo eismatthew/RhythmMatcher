@@ -1,30 +1,3 @@
-// const axios = require('axios');
-
-// document.addEventListener('DOMContentLoaded', () => {
-
-//     let isbn = '0201558025';
-//     axios.get(`/books/${isbn}`)
-//     .then((response) => {
-//         console.log(response); 
-//     })
-//     .catch(function (error) {
-//         console.log(error);
-//     });
-
-//     let query = "grace hopper";
-//     axios.get(`/search?string=${query}`)
-//     .then((response) => {
-//         console.log(response);
-//     })
-//     .catch(function (error) {
-//         console.log(error);
-//     });
-    
-// })
-
-
-
-
 var isHolding = {
   a: false,
   s: false,
@@ -93,7 +66,7 @@ var setupSpeed = function () {
         buttons[1].className = 'btn btn--small';
         buttons[2].className = 'btn btn--small';
         speed = parseInt('1x') - 1;
-      } else if (this.innerHTML === '2x') {
+      } else if (this.innerHTML === 'Hard') {
         buttons[0].className = 'btn btn--small';
         buttons[1].className = 'btn btn--small btn--selected';
         buttons[2].className = 'btn btn--small';
@@ -190,8 +163,8 @@ var setupNoteMiss = function () {
 };
 
 /**
- * Allows keys to be only pressed one time. Prevents keydown event
- * from being handled multiple times while held down.
+ * Allow keys to be only pressed one time. Prevents keydown event
+ * from being handled multiple times.
  */
 var setupKeys = function () {
   document.addEventListener('keydown', function (event) {
@@ -241,7 +214,7 @@ var judge = function (index) {
   var hitJudgement;
 
   /**
-   * As long as the note has travelled less than 3/4 of the height of
+   * As long as the note has travelled less than 75% of the height of
    * the track, any key press on this track will be ignored.
    */
   if (accuracy > (nextNote.duration - speed) / 4) {
@@ -252,7 +225,7 @@ var judge = function (index) {
   displayAccuracy(hitJudgement);
   showHitEffect(index);
   updateHits(hitJudgement);
-  updateCombo(hitJudgement);
+//   updateCombo(hitJudgement);
   updateMaxCombo();
   calculateScore(hitJudgement);
   removeNoteFromTrack(tracks[index], tracks[index].firstChild);
@@ -260,11 +233,11 @@ var judge = function (index) {
 };
 
 var getHitJudgement = function (accuracy) {
-  if (accuracy < 0.1) {
+  if (accuracy < 0.2) {
     return 'perfect';
-  } else if (accuracy < 0.2) {
+  } else if (accuracy < 0.4) {
     return 'good';
-  } else if (accuracy < 0.3) {
+  } else if (accuracy < 0.6) {
     return 'bad';
   } else {
     return 'miss';
