@@ -13,6 +13,7 @@ var four_bar = 24.8
 var eight_bar = 49.6
 var sixteen_bar = 99.2
 
+
 var a = {
   color: 'rgba(219, 68, 55, 1)',
   next: 0,
